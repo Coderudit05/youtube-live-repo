@@ -1,0 +1,125 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lazy vs Eager Loading Demo</title>
+  </head>
+
+  <body>
+    ```
+    <h1>HTML Loading Demo</h1>
+
+    <p>
+      Open the browser DevTools, go to the Network tab, select Img, reload the
+      page, and then scroll slowly.
+    </p>
+
+    <hr />
+
+    <h2>Eager Loading</h2>
+
+    <p>
+      This image uses <code>loading="eager"</code>. The browser can request this
+      image immediately while loading the page.
+    </p>
+
+    <img
+      src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200"
+      alt="Mountain landscape"
+      loading="eager"
+      width="800"
+    />
+
+    <hr />
+
+    <h2>Lazy Loading - Image 1</h2>
+
+    <p>
+      This image uses <code>loading="lazy"</code>. The browser can delay
+      downloading it until it gets close to the viewport.
+    </p>
+
+    <img
+      src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200"
+      alt="Lake and mountains"
+      loading="lazy"
+      width="800"
+    />
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+    <h2>Lazy Loading - Image 2</h2>
+
+    <p>
+      Scroll down and watch the Network tab. The browser may request this image
+      when it approaches the viewport.
+    </p>
+
+    <img
+      src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200"
+      alt="Forest"
+      loading="lazy"
+      width="800"
+    />
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+    <h2>Lazy Loading - Image 3</h2>
+
+    <p>Another image using native HTML lazy loading.</p>
+
+    <img
+      src="https://images.unsplash.com/photo-1500534623283-312aade485b7?w=1200"
+      alt="Ocean"
+      loading="lazy"
+      width="800"
+    />
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+    <h2>Lazy Loading - Image 4</h2>
+
+    <p>Watch the Network tab while scrolling toward this image.</p>
+
+    <img
+      src="https://images.unsplash.com/photo-1511497584788-876760111969?w=1200"
+      alt="Trees"
+      loading="lazy"
+      width="800"
+    />
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+    <h2>What Happens?</h2>
+
+    <p>1. Browser requests the HTML page from the server.</p>
+
+    <p>2. Browser parses the HTML.</p>
+
+    <p>3. Browser discovers the image URLs.</p>
+
+    <p>4. Eager images can be downloaded immediately.</p>
+
+    <p>5. Lazy images can wait until they are close to the viewport.</p>
+
+    <p>6. Browser sends an HTTP request for the image.</p>
+
+    <p>7. Server sends the image data back.</p>
+
+    <p>8. Browser displays the image.</p>
+
+    <h2>Network Tab Demo</h2>
+
+    <p>Open DevTools → Network → Img.</p>
+
+    <p>Reload the page and then scroll slowly.</p>
+
+    <p>
+      You should be able to observe when the browser requests the different
+      images.
+    </p>
+    ```
+  </body>
+</html>
