@@ -1,125 +1,288 @@
-<!doctype html>
 
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lazy vs Eager Loading Demo</title>
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Lazy Loading Live Demo</title>
+</head>
+<body>
 
-  <body>
-    ```
-    <h1>HTML Loading Demo</h1>
+    <h1>HTML Image Loading Demonstration</h1>
 
     <p>
-      Open the browser DevTools, go to the Network tab, select Img, reload the
-      page, and then scroll slowly.
+        Welcome to this demonstration of image loading in HTML.
+        Modern websites often contain many large photographs.
+        Downloading every image immediately can consume bandwidth
+        and delay the loading of the content that visitors want
+        to see first. HTML provides the loading attribute to help
+        the browser decide whether an image should be requested
+        eagerly or whether its request can be postponed.
+        In this experiment, we will compare eager and lazy loading
+        using a long page containing landscape photographs.
+        Open the browser Network panel and watch the image requests
+        as you scroll through the document.
     </p>
 
-    <hr />
-
-    <h2>Eager Loading</h2>
+    <h2>Part 1: Eager Loading</h2>
 
     <p>
-      This image uses <code>loading="eager"</code>. The browser can request this
-      image immediately while loading the page.
-    </p>
-
-    <img
-      src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200"
-      alt="Mountain landscape"
-      loading="eager"
-      width="800"
-    />
-
-    <hr />
-
-    <h2>Lazy Loading - Image 1</h2>
-
-    <p>
-      This image uses <code>loading="lazy"</code>. The browser can delay
-      downloading it until it gets close to the viewport.
+        Eager loading is useful for images that are immediately
+        important to the visitor, such as the main photograph
+        at the beginning of an article. The browser can request
+        these images without waiting for them to approach the
+        visible screen. Let's begin with two landscape images.
     </p>
 
     <img
-      src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200"
-      alt="Lake and mountains"
-      loading="lazy"
-      width="800"
-    />
-
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-
-    <h2>Lazy Loading - Image 2</h2>
+        src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=90&demo=top01"
+        alt="Mountain landscape"
+        width="900"
+        height="600"
+        loading="eager"
+    >
 
     <p>
-      Scroll down and watch the Network tab. The browser may request this image
-      when it approaches the viewport.
+        Mountains contain diverse ecosystems and provide water
+        to millions of people. Their landscapes change with
+        altitude, climate, and season. Images near the beginning
+        of a webpage are often important because visitors see
+        them immediately. Eager loading allows the browser to
+        request such images without applying the lazy-loading
+        delay. The browser still controls the exact timing of
+        network requests.
     </p>
 
     <img
-      src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200"
-      alt="Forest"
-      loading="lazy"
-      width="800"
-    />
-
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-
-    <h2>Lazy Loading - Image 3</h2>
-
-    <p>Another image using native HTML lazy loading.</p>
-
-    <img
-      src="https://images.unsplash.com/photo-1500534623283-312aade485b7?w=1200"
-      alt="Ocean"
-      loading="lazy"
-      width="800"
-    />
-
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-
-    <h2>Lazy Loading - Image 4</h2>
-
-    <p>Watch the Network tab while scrolling toward this image.</p>
-
-    <img
-      src="https://images.unsplash.com/photo-1511497584788-876760111969?w=1200"
-      alt="Trees"
-      loading="lazy"
-      width="800"
-    />
-
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-
-    <h2>What Happens?</h2>
-
-    <p>1. Browser requests the HTML page from the server.</p>
-
-    <p>2. Browser parses the HTML.</p>
-
-    <p>3. Browser discovers the image URLs.</p>
-
-    <p>4. Eager images can be downloaded immediately.</p>
-
-    <p>5. Lazy images can wait until they are close to the viewport.</p>
-
-    <p>6. Browser sends an HTTP request for the image.</p>
-
-    <p>7. Server sends the image data back.</p>
-
-    <p>8. Browser displays the image.</p>
-
-    <h2>Network Tab Demo</h2>
-
-    <p>Open DevTools → Network → Img.</p>
-
-    <p>Reload the page and then scroll slowly.</p>
+        src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1600&q=90&demo=top02"
+        alt="Mountain lake"
+        width="900"
+        height="600"
+        loading="eager"
+    >
 
     <p>
-      You should be able to observe when the browser requests the different
-      images.
+        The next section contains images positioned much farther
+        down the page. Each image has a long block of text before
+        it. This creates substantial vertical distance between
+        the top of the document and the images near the bottom.
+        Our goal is to observe whether those distant images are
+        requested immediately or when we approach them by scrolling.
     </p>
-    ```
-  </body>
+
+    <h2>Part 2: Long Lazy Loading Gallery</h2>
+
+    <h2>Image 1: Forests</h2>
+
+    <p>
+        Forests support wildlife, protect soil, store carbon,
+        and help regulate the water cycle. They contain trees,
+        shrubs, fungi, insects, birds, and many other organisms.
+        Different forest ecosystems develop according to their
+        local climate and soil conditions. Protecting forests
+        helps maintain biodiversity and supports human communities.
+        Scroll down to reach the first photograph in this section.
+    </p>
+
+    <img
+        src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1600&q=90&demo=lazy01"
+        alt="Green forest"
+        width="900"
+        height="600"
+        loading="lazy"
+    >
+
+    <h2>Image 2: Wildlife</h2>
+
+    <p>
+        Wildlife depends on healthy habitats, reliable food
+        supplies, and access to water. Animals have developed
+        different adaptations to survive in forests, grasslands,
+        mountains, and wetlands. Habitat destruction and pollution
+        can threaten these species. Conservation efforts aim to
+        preserve natural environments for future generations.
+        This paragraph creates more distance before the next image.
+    </p>
+
+    <img
+        src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1600&q=90&demo=lazy02"
+        alt="Wildlife in nature"
+        width="900"
+        height="600"
+        loading="lazy"
+    >
+
+    <h2>Image 3: Ocean Waves</h2>
+
+    <p>
+        Oceans influence weather, transport heat around the planet,
+        and support marine ecosystems. Waves are influenced by
+        wind, tides, and underwater geography. Coastal environments
+        provide habitats for many plants and animals, while also
+        supporting fishing and tourism. Large photographs of ocean
+        landscapes can add considerable data to a website, making
+        deferred image loading useful for long pages.
+    </p>
+
+    <img
+        src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=1600&q=90&demo=lazy03"
+        alt="Ocean waves"
+        width="900"
+        height="600"
+        loading="lazy"
+    >
+
+    <h2>Image 4: Waterfalls</h2>
+
+    <p>
+        Waterfalls form when water flows over a steep change
+        in elevation. Over time, flowing water can erode rock
+        and change the surrounding landscape. These environments
+        often contain moisture-loving plants, insects, and birds.
+        Photographs of waterfalls are common in travel articles
+        and nature galleries. The image below is another example
+        of a resource that can be deferred by the browser.
+    </p>
+
+    <img
+        src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=1600&q=90&demo=lazy04"
+        alt="Waterfall surrounded by nature"
+        width="900"
+        height="600"
+        loading="lazy"
+    >
+
+    <h2>Image 5: Desert Landscapes</h2>
+
+    <p>
+        Deserts receive relatively little precipitation.
+        Some are hot, while others experience cold winters.
+        Plants and animals living in these environments have
+        developed ways to conserve water and withstand extreme
+        temperatures. Sand dunes, rocky plateaus, and dry valleys
+        create distinctive landscapes. A long article can contain
+        many photographs like the one below.
+    </p>
+
+    <img
+        src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=90&demo=lazy05"
+        alt="Desert landscape"
+        width="900"
+        height="600"
+        loading="lazy"
+    >
+
+    <h2>Image 6: Sunrise</h2>
+
+    <p>
+        Sunrise occurs as the Earth rotates and a location moves
+        into sunlight. The colors visible in the sky depend on
+        atmospheric conditions and the scattering of light.
+        Photographers often visit landscapes early in the morning
+        to capture soft lighting and changing colors. Continue
+        scrolling to explore the next photograph.
+    </p>
+
+    <img
+        src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1600&q=90&demo=lazy06"
+        alt="Sunrise across a landscape"
+        width="900"
+        height="600"
+        loading="lazy"
+    >
+
+    <h2>Image 7: Mountains and Valleys</h2>
+
+    <p>
+        Mountain valleys can contain rivers, forests, villages,
+        and agricultural land. Their environments depend on
+        elevation, rainfall, and seasonal temperature changes.
+        Mountain regions also influence how clouds form and
+        how water moves through the landscape. This photograph
+        is positioned farther down the document to help you
+        observe lazy-loading behavior.
+    </p>
+
+    <img
+        src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=90&demo=lazy07"
+        alt="Mountain peaks"
+        width="900"
+        height="600"
+        loading="lazy"
+    >
+
+    <h2>Image 8: Green Landscapes</h2>
+
+    <p>
+        Green landscapes may contain grasslands, forests,
+        hills, and other natural features. Vegetation depends
+        on sunlight, water, soil nutrients, and temperature.
+        These environments provide resources for wildlife
+        and opportunities for outdoor recreation. Large images
+        placed deep within a webpage are good candidates
+        for experimenting with lazy loading.
+    </p>
+
+    <img
+        src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=90&demo=lazy08"
+        alt="Expansive green landscape"
+        width="900"
+        height="600"
+        loading="lazy"
+    >
+
+    <h2>Image 9: Another Mountain Lake</h2>
+
+    <p>
+        Mountain lakes are influenced by rainfall, melting snow,
+        and water flowing from surrounding slopes. They provide
+        habitats for aquatic organisms and can supply water
+        to nearby communities. Their appearance changes with
+        sunlight and weather. Observe the Network panel again
+        before scrolling down to the next image.
+    </p>
+
+    <img
+        src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=90&demo=lazy09"
+        alt="Lake surrounded by mountains"
+        width="900"
+        height="600"
+        loading="lazy"
+    >
+
+    <h2>Image 10: More Natural Scenery</h2>
+
+    <p>
+        Natural landscapes remind us how many different
+        environments exist on our planet. Each ecosystem
+        contains organisms adapted to its conditions.
+        Preserving these places requires responsible use
+        of natural resources and protection of biodiversity.
+        This final photograph concludes the long scrolling
+        experiment. You can add more image elements using
+        the same HTML structure to extend the page further.
+    </p>
+
+    <img
+        src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1600&q=90&demo=lazy10"
+        alt="Beautiful natural scenery"
+        width="900"
+        height="600"
+        loading="lazy"
+    >
+
+    <h2>Conclusion</h2>
+
+    <p>
+        The loading attribute helps the browser decide how
+        image requests should be handled. Eager loading is
+        appropriate for important images near the beginning
+        of a page. Lazy loading can defer requests for images
+        farther down the document. Browser behavior depends
+        on factors such as viewport distance, network speed,
+        and caching. Use the Network panel to observe actual
+        requests rather than assuming every image waits until
+        it becomes visible.
+    </p>
+
+</body>
 </html>
