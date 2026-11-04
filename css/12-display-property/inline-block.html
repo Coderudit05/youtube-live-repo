@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inline Block Elements</title>
+
+    <style>
+      .box {
+        height: 100px;
+        width: 100px;
+        border: 2px solid brown;
+
+        /* display: inline; */
+
+        display: inline-block;
+      }
+
+      .span-box {
+        height: 100px;
+        width: 100px;
+         border: 2px solid brown;
+        /* display: block; */
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box" id="box1">block</div>
+    <div class="box" id="box2">block</div>
+    <div class="box" id="box3">block</div>
+
+    <span class="span-box">Span</span>
+    <span class="span-box">Span</span>
+  </body>
+</html>

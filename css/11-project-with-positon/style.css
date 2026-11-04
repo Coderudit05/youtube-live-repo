@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+
+}
+
+body {
+    background: linear-gradient(to right, rgb(55, 65, 81), rgb(17, 24, 39), rgb(0, 0, 0));
+    padding: 0.1px;
+}
+
+#card {
+    height: 400px;
+    width: 300px;
+    background-color: white;
+
+    margin-left: 600px;
+    margin-top: 150px;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+#top {
+    height: 30%;
+    /* background-color: peru; */
+    border-bottom: 5px solid #b9adad;
+
+    position: relative;
+
+}
+
+#top img {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    object-fit: cover;
+}
+
+#profile-pic {
+    height: 120px;
+    width: 120px;
+    background-color: red;
+    border-radius: 50%;
+    overflow: hidden;
+
+    position: absolute;
+    bottom: -60px;
+    border: 5px solid #b9adad;
+
+    left: 30%;
+}
+
+#profile-pic img {
+    height: 100%;
+    width: 100%;
+}
+
+#bottom {
+    height: 70%;
+    /* background-color: purple; */
+
+    padding: 30px;
+}
+
+
+#bottom h1 {
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 2px;
+}
+
+#bottom h4 {
+    text-align: center;
+    font: lighter;
+    margin-bottom: 4px;
+}
+
+#bottom p {
+    text-align: center;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+#bottom .links {
+    font-size: 30px;
+    margin-top: 20px;
+    text-align: center;
+
+}

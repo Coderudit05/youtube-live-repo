@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card using flex</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+
+      .parent {
+        /* background-color: peru; */
+        height: 100vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+      }
+
+      .card {
+        height: 400px;
+        width: 300px;
+        border: 2px solid black;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="card"></div>
+    </div>
+  </body>
+</html>

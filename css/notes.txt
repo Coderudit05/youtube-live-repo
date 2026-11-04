@@ -1,0 +1,3 @@
+Selectors : In CSS, Selectors are nothing but some patterns used to select the elements you want to style. 
+They are used to target HTML elements based on their id, class, type, attributes, and more. 
+Selectors can be simple or complex, allowing for precise control over which elements are affected by your CSS rules.

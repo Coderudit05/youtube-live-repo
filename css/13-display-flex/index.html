@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dispaly Flex</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      .parent {
+        /* background-color: purple; */
+        height: 100vh;
+        width: 100vw;
+        display: flex; /* by default row direction */
+
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 50px;
+      }
+      .box {
+        height: 200px;
+        width: 200px;
+        border: 2px solid black;
+        
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>

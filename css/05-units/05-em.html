@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>em-unit in css</title>
+    <style>
+      /* 1em -> current font size (16px) */
+
+      /* if -> font size => 16px then 1em => 16px
+         if font size => 18px then 1em => 18px  */
+
+      /* Conclusion => em depends on current font size of that element */
+
+      p {
+        font-size: 18px;
+        height: 10em;
+        width: 10em;
+        background-color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <p></p>
+  </body>
+</html>
