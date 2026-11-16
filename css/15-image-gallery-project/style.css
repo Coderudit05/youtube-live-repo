@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    /* background-color: black;
+    color: white; */
+}
+
+header {
+    /* background-color: blanchedalmond; */
+    box-shadow: 0px 0px 10px #FD8323;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    /* background-color: peru; */
+    max-width: 1400px;
+
+    margin: 0px auto;
+    padding: 0px 20px;
+
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* background-color: purple; */
+    font-size: 30px;
+}
+
+#navLinks {
+    /* background-color: brown; */
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+#navLinks li {
+    list-style: none;
+}
+
+#navLinks li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #FD8323;
+
+}
+
+#contactLink {
+    border: 2px solid #FD8323;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+
+/* From here we are styling our hero section  */
+
+#hero {
+    /* background-color: peru; */
+    height: calc(100vh - 64px);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* gap: 40px; */
+}
+
+
+#hero h2 {
+    color: #FD8323;
+}
+
+#hero h1 {
+    font-size: 60px;
+    text-align: center;
+    line-height: 60px;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: gray;
+
+}
+
+#hero #heroButtons {
+    /* background-color: red; */
+    display: flex;
+    gap: 20px;
+
+}
+
+#heroButtons button {
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px solid rgba(128, 128, 128, 0.208);
+}
+
+#heroButtons #firstBtn {
+    background-color: #FD8323;
+    color: white;
+}
