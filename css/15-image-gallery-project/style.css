@@ -201,3 +201,80 @@ header nav {
     grid-row: 3/4;
     background-color: #FD8323;
 }
+
+
+#viewMorePhotos {
+    /* background-color: purple; */
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#viewMorePhotos button {
+    padding: 10px 20px;
+    border: 2px solid #FD8323;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+
+/* From here we are going ot start styling the footer */
+
+
+footer {
+    padding: 20px;
+}
+
+footer #footerWrapper {
+    max-width: 1400px;
+    /* background-color: purple; */
+    margin: 0px auto;
+
+    padding: 10px 20px;
+
+    border-top: 2px solid gray;
+
+}
+
+#footerNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#footerLogoWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+#footerLogo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 30px;
+}
+
+#footerLogoWrapper p {
+    font-size: 20px;
+}
+
+#footerLinks {
+    display: flex;
+    gap: 20px;
+    font-size: 18px;
+    list-style: none;
+}
+
+#footerLinks a {
+    text-decoration: none;
+}
+
+#footerPara {
+    text-align: center;
+    font-weight: 600;
+    color: gray;
+}
