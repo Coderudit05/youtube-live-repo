@@ -123,14 +123,17 @@ header nav {
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, 250px);
 
     gap: 10px;
+
+    max-width: 1400px;
+    margin: 0 auto;
 
 }
 
 
-#gallerySEction .img img {
+#gallerySection .img img {
     height: 100%;
     width: 100%;
 }
