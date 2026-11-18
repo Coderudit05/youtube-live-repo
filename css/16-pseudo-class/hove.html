@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo Class</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+        background-color: black;
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      button {
+        cursor: pointer;
+        padding: 10px 20px;
+        border-radius: 10px;
+        border: none;
+        background-color: brown;
+        color: white;
+
+        /* transition-property: all;
+        transition-duration: 0.5s; */
+
+        transition: all 0.5s;
+      }
+
+      button:hover {
+        background-color: white;
+        color: black;
+
+        /* transition -> making our animation smooth */
+      }
+    </style>
+  </head>
+  <body>
+    <button>Hove Me</button>
+  </body>
+</html>
