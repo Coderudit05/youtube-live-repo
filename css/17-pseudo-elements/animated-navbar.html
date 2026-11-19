@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Navbar</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        background-color: black;
+        height: 100%;
+
+        color: white;
+      }
+
+      header {
+        /* background-color: purple; */
+        box-shadow: 0px 0px 10px salmon;
+      }
+
+      header nav {
+        display: flex;
+        /* background-color: peru; */
+        max-width: 1400px;
+        margin: 0px auto;
+
+        justify-content: space-between;
+        align-items: center;
+        height: 64px;
+        /* background-color: pink; */
+      }
+
+      nav #logo {
+        font-size: 30px;
+        font-weight: bolder;
+        color: salmon;
+      }
+
+      nav ul {
+        display: flex;
+        gap: 20px;
+        font-size: 20px;
+        list-style: none;
+      }
+
+      nav ul a {
+        text-decoration: none;
+        color: white;
+      }
+
+      nav .navLink {
+        position: relative;
+
+        transition: all 0.3s;
+      }
+
+      .navLink:hover{
+        color: salmon;
+      }
+
+      nav .navLink::before {
+        content: "";
+        height: 2px;
+        width: 0%;
+        background-color: salmon;
+        position: absolute;
+
+        bottom: -4px;
+        
+        transition: width 0.3s;
+      }
+
+      .navLink:hover::before{
+        width: 100%;
+      }
+
+
+      /* this code is for the navButton */
+      nav #navBtn {
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-size: 20px;
+        border: none;
+        cursor: pointer;
+
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+
+        transition: all 0.3s;
+      }
+
+      #navBtn:hover {
+        color: white;
+      }
+
+      #navBtn::before {
+        content: "";
+        height: 100%;
+        width: 0%;
+        background-color: salmon;
+        position: absolute;
+
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        transition: width 0.3s;
+      }
+
+      #navBtn:hover::before {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div id="logo">Logo</div>
+
+        <ul>
+          <li><a class="navLink" href="#">Home</a></li>
+          <li><a class="navLink" href="#">About</a></li>
+          <li><a class="navLink" href="#">Work</a></li>
+          <li><a class="navLink" href="#">Projects</a></li>
+        </ul>
+
+        <button id="navBtn">Let's Connect</button>
+      </nav>
+    </header>
+  </body>
+</html>
