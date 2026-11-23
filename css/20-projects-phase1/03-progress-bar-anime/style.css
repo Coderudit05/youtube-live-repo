@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    height: 300px;
+    width: 600px;
+    background-color: gainsboro;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.status {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    font-size: 30px;
+    /* background-color: purple; */
+
+}
+
+.progressBar {
+    border: 1px solid gray;
+    height: 60px;
+    width: 80%;
+    border-radius: 10px;
+
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.progressBar::before {
+    content: "";
+    height: 100%;
+    width: 0%;
+    background-color: yellowgreen;
+    position: absolute;
+    transition: all 5s ease-in-out;
+}
+
+.progressBar:hover::before {
+    width: 100%;
+}
