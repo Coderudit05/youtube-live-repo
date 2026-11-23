@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    /* background-color: black; */
+    background: linear-gradient(to right, rgb(17, 24, 39), rgb(75, 85, 99));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    height: 500px;
+    width: 350px;
+    background-color: white;
+    background: linear-gradient(to right, rgb(55, 65, 81), rgb(17, 24, 39), rgb(0, 0, 0));
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px white;
+    position: relative;
+}
+
+.ball {
+    height: 120px;
+    width: 120px;
+    background: linear-gradient(to right, rgb(165, 180, 252), rgb(192, 132, 252));
+    border-radius: 50%;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%);
+
+    animation: bouncingBallAnime 2s infinite ease-in;
+
+}
+
+.shadow {
+    background: linear-gradient(to right, rgb(219, 234, 254), rgb(147, 197, 253), rgb(59, 130, 246));
+    height: 20px;
+    width: 120px;
+    position: absolute;
+
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 50%;
+
+    animation: shadowAnime 2s infinite ease-out;
+}
+
+/* This animatation was only for ball anime */
+@keyframes bouncingBallAnime {
+
+    0%,
+    100% {
+        transform: translate(-50%);
+    }
+
+    50% {
+        transform: translate(-50%, -320px);
+    }
+}
+
+/* This animation was only for shadow anime */
+
+@keyframes shadowAnime {
+
+    0%,
+    100% {
+        transform: translate(-50%) scale(1);
+    }
+
+    50% {
+        transform: translate(-50%) scale(0.5);
+
+    }
+
+}
