@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+footer {
+    background: #000;
+    color: white;
+}
+
+.footer-wrapper {
+
+    /* background-color: aquamarine; */
+    padding: 40px 20px;
+    max-width: 1400px;
+    margin: 0px auto;
+
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr) 1.5fr;
+    gap: 30px;
+}
+
+.footer-wrapper .col {
+    /* background-color: orange; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+#col1 {
+    max-width: 300px;
+    /* background-color: purple; */
+
+    display: flex;
+}
+
+#col1 h2 {
+    color: #D9605D;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+#col1 h3 {
+    color: #eeebe7a0;
+}
+
+#col1 .footer-about {
+    color: rgb(137, 128, 128);
+    font-size: 18px;
+}
+
+
+.col ul {
+    list-style: none;
+}
+
+.col ul a {
+    text-decoration: none;
+    color: white;
+}
+
+.footerLinks h3 {
+    font-size: 24px;
+}
+
+
+/* input (last column) */
+
+#col5 {
+    /* display: flex; */
+
+}
+
+#footerInput {
+    background-color: rgba(245, 245, 245, 0.836);
+    padding: 10px;
+    border-radius: 10px;
+    /* max-width: 30px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+#footerInput input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 10px;
+    font-size: 20px;
+
+}
+
+#footerInput span {
+    background-color: violet;
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    /* font-size: 30px; */
+}
+
+#days {
+    display: flex;
+    gap: 14px;
+}
+
+#days img {
+    height: 30px;
+    width: 30px;
+}
+
+/* 
+@media (max-width:1200px) {
+
+    .footer-wrapper {
+        grid-template-columns: 2fr repeat(3, 1fr);
+    }
+}
+
+@media (max-width:900px) {
+
+    .footer-wrapper {
+        grid-template-columns: 2fr repeat(2, 1fr);
+    }
+}
+
+@media (max-width:750px) {
+
+    .footer-wrapper {
+        grid-template-columns: 2fr repeat(1, 1fr);
+    }
+}
+
+@media (max-width:600px) {
+
+    .footer-wrapper {
+        grid-template-columns: 1fr;
+    }
+} */
+
+@media (max-width: 1000px) {
+    .footer-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #col1 {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 650px) {
+    .footer-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #col1,
+    #col5 {
+        grid-column: span 2;
+    }
+}
